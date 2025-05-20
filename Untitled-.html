@@ -111,7 +111,7 @@
                 <tr>
 
                     <td class="meal-image-cell">
-                        <div class="responsive-image-in-table" style="background-image: url('https://ifh.cc/g/oKyFGB.jpg');height: 984px;">
+                        <div class="responsive-image-in-table" style="background-image: url('https://ifh.cc/g/oKyFGB.jpg');height: 984px;   width: 100%;">
                         </div>
                     </td>
                 </tr>
