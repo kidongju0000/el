@@ -1,7 +1,9 @@
-<html lang="ko"><head>
+<html lang="en-US">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>학교 급식표</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>el</title>
     <style>
         * {
             margin: 0;
@@ -64,17 +66,26 @@
             background-color: #f9f9f9;
         }
         
+        /* 수정된 이미지 스타일 */
         .meal-image-cell {
             padding: 0 !important;
             width: 30%;
         }
         
+        .image-container {
+            position: relative;
+            width: 100%;
+            padding-top: 100%; /* 1:1 비율 유지 */
+            overflow: hidden;
+        }
+        
         .responsive-image-in-table {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
             height: 100%;
-            min-height: 200px;
-            background-size: cover;
-            background-position: center;
+            object-fit: cover; /* 이미지 비율 유지하며 채움 */
         }
         
         .date-selector {
@@ -84,43 +95,39 @@
         
         @media (max-width: 768px) {
             .meal-image-cell {
-                display: none;
+                width: 50%; /* 모바일에서도 이미지 표시 */
             }
         }
     </style>
 </head>
 <body>
-    <a href="https://www.schoolwebsite.com" class="top-link" target="_blank">홈</a>
-    
-    <div class="meal-container">
+    <div class="container-lg px-3 my-5 markdown-body">
+        <h1><a href="https://kidongju0000.github.io/el/">el</a></h1>
         
-       
-        <table class="meal-table">
-            <thead>
-                <tr>
-                    
-                    <th class="meal-image-cell">엘노핌</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    
-                
-                </tr>
-              
-                <tr>
-
-                    <td class="meal-image-cell">
-                        <div class="responsive-image-in-table" style="background-image: url('https://ifh.cc/g/oKyFGB.jpg');height: 984px;   width: 100%;">
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <a href="https://www.schoolwebsite.com" class="top-link" target="_blank">홈</a>
+        
+        <div class="meal-container">
+            <table class="meal-table">
+                <thead>
+                    <tr>
+                        <th class="meal-image-cell">엘노핌</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="meal-image-cell">
+                            <div class="image-container">
+                                <img src="https://ifh.cc/g/oKyFGB.jpg" class="responsive-image-in-table" alt="엘노핌 이미지">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
     
     <script>
         document.getElementById('date-select').valueAsDate = new Date();
     </script>
-
-</body></html>
+</body>
+</html>
