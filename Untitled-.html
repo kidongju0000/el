@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>el</title>
+    <title></title>
     <style>
         * {
             margin: 0;
@@ -102,7 +102,7 @@
 </head>
 <body>
     <div class="container-lg px-3 my-5 markdown-body">
-        <h1><a href="https://kidongju0000.github.io/el/">el</a></h1>
+        <h1><a href="https://kidongju0000.github.io/el/"></a></h1>
         
         <a href="https://kidongju0000.github.io/home-page/" class="top-link" target="_blank">홈</a>
         
