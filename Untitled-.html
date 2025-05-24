@@ -3,20 +3,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>달력 표</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
         }
         
         body {
-            font-family: 'Arial', sans-serif;
             background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
         }
         
         .top-link {
@@ -29,105 +30,149 @@
             font-weight: bold;
             border-radius: 5px;
             margin-bottom: 20px;
-            transition: all 0.3s;
+            width: 100%;
+            max-width: 500px;
         }
         
-        .top-link:hover {
-            background-color: #45a049;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        
-        .meal-container {
+        .calendar-container {
+            width: 100%;
+            max-width: 500px;
             background: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .meal-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        
-        .meal-table th, .meal-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: center;
-        }
-        
-        .meal-table th {
-            background-color: #4CAF50;
-            color: white;
-        }
-        
-        .meal-table tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        
-        /* 수정된 이미지 스타일 */
-        .meal-image-cell {
-            padding: 0 !important;
-            width: 30%;
-        }
-        
-        .image-container {
-            position: relative;
-            width: 100%;
-            padding-top: 100%; /* 1:1 비율 유지 */
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             overflow: hidden;
         }
         
-        .responsive-image-in-table {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* 이미지 비율 유지하며 채움 */
-        }
-        
-        .date-selector {
-            margin: 15px 0;
+        .calendar-header {
+            background-color: #4CAF50;
+            color: white;
             text-align: center;
+            padding: 15px;
+            font-size: 1.2em;
         }
         
-        @media (max-width: 768px) {
-            .meal-image-cell {
-                width: 50%; /* 모바일에서도 이미지 표시 */
-            }
+        .calendar {
+            width: 100%;
+            aspect-ratio: 1/1; /* 1:1 비율 유지 */
+            border-collapse: collapse;
+        }
+        
+        .calendar th {
+            background-color: #f0f0f0;
+            padding: 10px;
+            text-align: center;
+            color: #333;
+        }
+        
+        .calendar td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #e0e0e0;
+            cursor: pointer;
+        }
+        
+        .calendar td:hover {
+            background-color: #f0f0f0;
+        }
+        
+        .current-day {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 50%;
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            line-height: 24px;
         }
     </style>
 </head>
 <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-        <h1><a href="https://kidongju0000.github.io/el/"></a></h1>
-        
-        <a href="https://kidongju0000.github.io/home-page/" class="top-link" target="_blank">홈</a>
-        
-        <div class="meal-container">
-            <table class="meal-table">
-                <thead>
-                    <tr>
-                        <th class="meal-image-cell">엘노핌</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="meal-image-cell">
-                            <div class="image-container">
-                                <img src="https://ifh.cc/g/oKyFGB.jpg" class="responsive-image-in-table" alt="엘노핌 이미지">
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+    <a href="https://www.schoolwebsite.com" class="top-link" target="_blank">홈</a>
     
+    <div class="calendar-container">
+        <div class="calendar-header">
+            2023년 11월
+        </div>
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th>일</th>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                    <th>토</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1일 <br> 짜장면 </td>
+                    <td>2일 <br> </td>
+                    <td>3일 <br> </td>
+                    <td>4일 <br> </td>
+                </tr>
+                <tr>
+                    <td>5일 <br> </td>
+                    <td>6일 <br> </td>
+                    <td>7일 <br> </td>
+                    <td>8일 <br> </td>
+                    <td>9일 <br> </td>
+                    <td>10일 <br> </td>
+                    <td>11일 <br> </td>
+                </tr>
+                <tr>
+                    <td>12일 <br> </td>
+                    <td>13일 <br> </td>
+                    <td>14일 <br> </td>
+                    <td>15일 <br> </td>
+                    <td>16일 <br> </td>
+                    <td>17일 <br> </td>
+                    <td>18일 <br> </td>
+                </tr>
+                <tr>
+                    <td>19일 <br> </td>
+                    <td>20일 <br> </td>
+                    <td>21일 <br> </td>
+                    <td>22일 <br> </td>
+                    <td>23일 <br> </td>
+                    <td>24일 <br> </td>
+                    <td>25일 <br> </td>
+                </tr>
+                <tr>
+                    <td>26일 <br> </td>
+                    <td>27일 <br> </td>
+                    <td>28일 <br> </td>
+                    <td>29일 <br> </td>
+                    <td>30일 <br> </td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <script>
-        document.getElementById('date-select').valueAsDate = new Date();
+        // 현재 날짜 표시 기능
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date();
+            const currentDate = today.getDate();
+            const currentMonth = today.getMonth() + 1;
+            const currentYear = today.getFullYear();
+            
+            // 현재 월 표시
+            if(currentMonth === 11 && currentYear === 2023) {
+                const cells = document.querySelectorAll('.calendar td');
+                cells.forEach(cell => {
+                    if(cell.textContent == currentDate) {
+                        cell.innerHTML = `<span class="current-day">${currentDate}</span>`;
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
