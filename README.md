@@ -68,7 +68,7 @@
     </style>
 </head>
 <body>
-    <a href="https://www.schoolwebsite.com" class="top-link" target="_blank">홈</a>
+    <a href="https://kidongju0000.github.io/home-page/" class="top-link" target="_blank">홈</a>
     
     <div class="image-container">
         <img src="https://ifh.cc/g/oKyFGB.jpg" class="fullscreen-image" alt="풀스크린 이미지">
